@@ -12,7 +12,7 @@ interface NotaAPI{
     @GET("/nota/titulo/{titulo}")
     fun buscarPorTitulo(@Path("titulo")titulo:String):Call<List<Nota>>
 
-    @POST
+    @POST("/nota")
     fun salvar(@Body nota:Nota): Call<Nota>
 
     @DELETE("/nota/{id}")
